@@ -1,0 +1,81 @@
+
+th {
+  width: 400px;
+  border-radius: 5px;
+  padding: 5px 8px;
+  border: 1px solid white;
+}
+
+td {
+  padding: 5px 0;
+  border-radius: 5px;
+  font-weight: 700;
+  border: 1px solid white; 
+  user-select: none;
+}
+
+tr {
+  background:   wheat;
+  border: 1px solid white;
+}
+
+table{
+  margin: 35px 0;
+  table-layout: auto;
+  color: #5C2610;
+  /* color: #607584; */
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  transition: .3s ease-in-out;
+}
+
+a {
+  background-image: linear-gradient(#EE5E4F 50%, #EE5E4F 50%), linear-gradient(silver 50%, silver 50%); 
+  background-position: center bottom; 
+  background-repeat: no-repeat; 
+  background-size: 0 .063em, 100% .063em;
+  color: #5C2610; 
+  /* color: #607584;  */
+  padding-bottom: .188em; 
+  transition: background-size .5s;
+}
+a:hover {
+  background-size: 100% .063em, 100% .063em; 
+  background-position: left bottom;
+}
+
+.red {
+  background: #A61C00;
+  color: #A61C00;
+}
+
+.green {
+  background: #80A86F;
+  color: #80A86F;
+}
+
+.yellow {
+  background: #E2C271;
+  color: #E2C271;
+}
+
+.gray {
+  background: #AAADAA;
+  color: #AAADAA;
+}
+
+.pink {
+  background: #EA9999;
+  color: #EA9999;
+}
+
+.white {
+  background: white;
+  padding: 0 10px 0 0; 
+}

@@ -1,1 +1,1 @@
-# dashboard-gh-pages
+# mentor-dashboard

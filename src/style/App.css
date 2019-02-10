@@ -1,0 +1,33 @@
+body {
+  color: #5C2610;
+  background:white;
+  font-size: 18px;
+}
+
+ h1 {
+  margin: 1em 0 0.5em 0;
+  color: #5C2610;
+  font-weight: normal;
+  font-family: 'Ultra', sans-serif;  
+  font-size: 44px;
+  line-height: 46px;
+  text-transform: uppercase;
+  text-shadow: 0 2px white, 0 3px #777;
+}
+
+ .headline {
+  text-align: center;
+  margin: 15px 0;
+} 
+
+.wrapper-search {
+  display: flex;
+}
+
+p {
+  color: #5C2610;
+  width: 165px;
+  margin: 5px 5px 0 5px;
+  font-weight: 700;
+  font-size: 22px;
+}
