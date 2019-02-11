@@ -16,18 +16,18 @@ export class App extends Component {
     this.setState({ mentor: nickName })
  }
 
-async componentDidMount() {
-    await fetch('./_data/data.json')
+  async componentDidMount() {
+    await fetch('./data.json')
       .then(response => response.json())
       .then((data) => {
-        this.setState({ data }, () => this.setState({ isLoading: false }));
+        this.setState({ data, isLoading: false });
       })
       .catch(err => console.log(err));
   }
 
   render() {
 
-    const {data, isLoading, mentor } = this.state;
+  const {data, isLoading, mentor} = this.state;
   
   if (isLoading) {
     return (
@@ -38,10 +38,10 @@ async componentDidMount() {
   } else
     return (
       <Fragment>
-        <div className={'headline'}>
+        <div className='headline'>
           <h1>Mentor dashboard</h1>
         </div>
-        <div className={'wrapper-search'}>
+        <div className='wrapper-search'>
           <p>Select mentor: </p> 
           <SelectValue 
             data={data}
