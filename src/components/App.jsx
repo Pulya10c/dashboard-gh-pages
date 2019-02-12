@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { SelectValue } from './selectValue.jsx';
 import { Table } from './Table.jsx'
 import Description from './NotationDescriptions.jsx'
+import Loader from './Loader.jsx';
 import '../style/App.css'; 
 
 
@@ -31,9 +32,7 @@ export class App extends Component {
   
   if (isLoading) {
     return (
-      <div>
-        <h3>Loading...</h3>
-      </div>
+      <Loader />
     );
   } else
     return (
