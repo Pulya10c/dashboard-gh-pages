@@ -11,11 +11,11 @@ export class App extends Component {
     isLoading: true,
     data: null,
     mentor: null,
-  }
+  };
 
   onMentorSelection = (nickName) => {
     this.setState({ mentor: nickName })
- }
+ };
 
   async componentDidMount() {
     await fetch('./data.json')
@@ -24,7 +24,7 @@ export class App extends Component {
         this.setState({ data, isLoading: false });
       })
       .catch(err => console.log(err));
-  }
+  };
 
   render() {
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-undef */
 const startTime = new Date();
@@ -41,6 +42,7 @@ const listTasks = (tasksXLSX) => {
 const result = {};
 result.tasks = listTasks(tasksList);
 
+// eslint-disable-next-line consistent-return
 const compareTasks = (taskStud, taskData) => {
   if (result.tasks[taskStud].status === 'in progress') {
     return 'yellow';
@@ -74,21 +76,21 @@ const scoreStatusTask = (scoreInfoFile, nickNameStudents, nameTask) => {
   let D = `D${currentRow}`;
   let F = `F${currentRow}`;
   let flag = 0;
-  let result = '';
+  let res;
   while (scoreInfoFile[C] && flag === 0) {
-    result = '';
+    res = '';
     if (scoreInfoFile[C].w.toLowerCase().indexOf(nickNameStudents) !== -1
     && nameTask.toLowerCase() === scoreInfoFile[D].w.trim().toLowerCase()) {
       flag = 1;
       if (scoreInfoFile[F]) {
         if (scoreInfoFile[F].v === 0) {
-          result = compareTasks(nameTask, 'missing');
+          res = compareTasks(nameTask, 'missing');
         } else {
-          result = compareTasks(nameTask, 'checked');
+          res = compareTasks(nameTask, 'checked');
         }
       // eslint-disable-next-line no-else-return
       } else {
-        result = compareTasks(nameTask, 'checking');
+        res = compareTasks(nameTask, 'checking');
       }
     }
     currentRow++;
@@ -97,9 +99,9 @@ const scoreStatusTask = (scoreInfoFile, nickNameStudents, nameTask) => {
     F = `F${currentRow}`;
   }
   if (flag === 0) {
-    result = compareTasks(nameTask, 'missing');
+    res = compareTasks(nameTask, 'missing');
   }
-  return result;
+  return res;
 };
 
 const tasksListStudents = (sheetTask, nickNameStd) => {
@@ -175,10 +177,10 @@ const getListMentor = (sheet, sheet2) => {
 };
 
 result.mentors = getListMentor(list1MentorSrudent, list2MentorSrudent, tasksList);
-const json = JSON.stringify(result, 0, 2);
+const json = JSON.stringify(result);
 
-fs.writeFile('public/_data/data.json', json, 'utf8', () => {
-  console.log('writing is done! The path to the file: pablic/_data/data.json');
+fs.writeFile('public/data.json', json, 'utf8', () => {
+  console.log('writing is done! The path to the file: public/data.json');
 });
 
 
