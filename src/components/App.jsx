@@ -27,7 +27,9 @@ export class App extends Component {
   }
 
   logout = () => {
-    this.setState({ user: null });
+    fb.logout().then(() => {
+      this.setState({ user: null });
+    });
   }
 
   onMentorSelection = (nickName) => {

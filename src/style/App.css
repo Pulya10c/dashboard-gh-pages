@@ -21,6 +21,7 @@ body {
 } 
 
 .wrapper-search {
+  max-width: calc(100vw - 50px);
   display: flex;
 }
 

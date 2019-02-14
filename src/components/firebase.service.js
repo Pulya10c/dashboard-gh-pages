@@ -16,6 +16,7 @@ provider.addScope('repo');
 
 const fb = {
   login: () => fire.auth().signInWithPopup(provider),
+  logout: () => fire.auth().signOut(),
 };
 
 export default fb;
