@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+}
+
+.wrapper-login {
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #5C2610;
+  align-items: center;
+}
+
+.text-login {
+  margin-bottom: 3vw;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.button-login {
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  background: url(./GitHub-Mark-Light-120px-plus.png) no-repeat;
+}
+
+.button-login:hover {
+  border-radius: 50%;
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),
+    url(./GitHub-Mark-Light-120px-plus.png) no-repeat;
+}
+
+.user-name {
+  color: #5C2610;
+  margin: 11px 5px 0 5px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.user {
+  width: 98%;
+  justify-content: flex-end;
+  display: flex;
+  height: 45px;
+}
+
+.avatar {
+  height: 45px;
+  border-radius: 50%;
+}
+
+.button-out {
+  margin:0 5px;
+  border: none;
+  border-radius: 3px;
+  background-color: #5C2610;
+  color: white;
+  margin-top: 10px;
+  height: 25px;
+}
+
+.button-out:hover{
+  background-color: rgb(63, 26, 12);
+  color: wheat;
+}

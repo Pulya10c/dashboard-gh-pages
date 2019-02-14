@@ -1,17 +1,34 @@
 import React, { Component, Fragment } from 'react';
 import { SelectValue } from './selectValue.jsx';
-import { Table } from './Table.jsx'
-import Description from './NotationDescriptions.jsx'
+import { Table } from './Table.jsx';
+import Description from './NotationDescriptions.jsx';
+import fb from './firebase.service.js';
+// import buttonLoad from './buttonLogin.jsx';
 import Loader from './Loader.jsx';
-import '../style/App.css'; 
+import '../style/App.css';
+import '../style/login.css'; 
 
 
 export class App extends Component {
   state = {
+    user: null,
     isLoading: true,
     data: null,
     mentor: null,
   };
+
+  login = () => {
+    fb.login().then(({ user }) => {
+      this.setState({ user });
+    }).catch(function(error) {
+      const errorMessage = error.message;
+      console.log(errorMessage);
+    });
+  }
+
+  logout = () => {
+    this.setState({ user: null });
+  }
 
   onMentorSelection = (nickName) => {
     this.setState({ mentor: nickName })
@@ -28,28 +45,43 @@ export class App extends Component {
 
   render() {
 
-  const {data, isLoading, mentor} = this.state;
-  
-  if (isLoading) {
+  const {data, isLoading, mentor, user} = this.state;
+
+  if (!user) {
     return (
-      <Loader />
+      <div className='wrapper-login'>
+        <h1>Mentor-dashboard</h1>
+        <span className='text-login'>Please log in with your github account:</span>
+        <div className='button-login' onClick={this.login}></div>
+      </div>
     );
   } else
-    return (
-      <Fragment>
-        <div className='headline'>
-          <h1>Mentor dashboard</h1>
-        </div>
-        <div className='wrapper-search'>
-          <p>Select mentor: </p> 
-          <SelectValue 
-            data={data}
-            onMentorSelection = {this.onMentorSelection}
-          />
-        </div>
-        <Table mentor = {mentor} data = {data} />
-        <Description />
-      </Fragment>
-    );
+    if (!isLoading) {
+      return (
+        <Fragment>
+          <div className='headline'>
+            <div className='user'>
+            <p className='user-name'>{user.displayName}</p>
+            <img className="avatar" alt="avatar" title={user.displayName} src={user.photoURL}></img>
+            <button className="button-out" type="button" onClick={this.logout}>Logout</button>
+            </div>
+            <h1>Mentor dashboard</h1>
+          </div>
+          <div className='wrapper-search'>
+            <p>Select mentor: </p> 
+            <SelectValue 
+              data={data}
+              onMentorSelection = {this.onMentorSelection}
+            />
+          </div>
+          <Table mentor = {mentor} data = {data} />
+          <Description />
+        </Fragment>
+      );
+    } else {
+        return (
+          <Loader />
+        )
+      }
   }
 }

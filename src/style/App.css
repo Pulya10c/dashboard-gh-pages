@@ -24,7 +24,7 @@ body {
   display: flex;
 }
 
-p {
+.wrapper-search p {
   color: #5C2610;
   width: 165px;
   margin: 5px 5px 0 5px;
