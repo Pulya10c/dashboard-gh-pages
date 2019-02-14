@@ -1,24 +1,27 @@
 body {
   color: #5C2610;
-  background:white;
+  background: white;
   font-size: 16px;
 }
 
- h1 {
-  margin: 1em 0 0.5em 0;
+h1 {
+  /* margin: 1em 0 0.5em 0; */
   color: #5C2610;
   font-weight: normal;
-  font-family: 'Ultra', sans-serif;  
+  font-family: 'Ultra', sans-serif;
   font-size: 44px;
   line-height: 46px;
   text-transform: uppercase;
   text-shadow: 0 2px white, 0 3px #777;
 }
 
- .headline {
+.headline {
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  display: flex;
   text-align: center;
-  margin: 15px 0;
-} 
+  margin: 15px 15px 40px;
+}
 
 .wrapper-search {
   max-width: calc(100vw - 50px);
@@ -28,7 +31,7 @@ body {
 .wrapper-search p {
   color: #5C2610;
   width: 165px;
-  margin: 5px 5px 0 5px;
+  margin: 5px 5px 0 19px;
   font-weight: 700;
   font-size: 22px;
 }
