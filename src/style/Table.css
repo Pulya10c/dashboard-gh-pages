@@ -1,13 +1,13 @@
 
 th {
-  width: 400px;
+  /* width: 400px; */
   border-radius: 5px;
-  padding: 5px 8px;
+  padding: 8px 10px;
   border: 1px solid white;
 }
 
 td {
-  padding: 5px 0;
+  padding: 10px 10px;
   border-radius: 5px;
   font-weight: 700;
   border: 1px solid white; 
@@ -20,7 +20,8 @@ tr {
 }
 
 table{
-  margin: 35px 0;
+  width: calc(100vw - 50px);
+  margin: 35px auto;
   table-layout: auto;
   color: #5C2610;
   /* color: #607584; */
@@ -29,9 +30,9 @@ table{
 a {
   text-decoration: none;
   display: inline-block;
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
   letter-spacing: 1px;
-  font-size: 18px;
+  font-size: 16px;
   transition: .3s ease-in-out;
 }
 
@@ -77,4 +78,8 @@ a:hover {
 .white {
   background: white;
   padding: 0 10px 0 0; 
+}
+
+.tasks-mame {
+  width: 20vw;
 }

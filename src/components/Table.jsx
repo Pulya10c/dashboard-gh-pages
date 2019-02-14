@@ -12,7 +12,7 @@ export class Table extends Component {
 
   listTasks = (data, mentor) => 
     Object.keys(data.tasks)
-      .map(item => <tr key={ data.tasks[item].id }><td><a target={ '_blank' } href={ data.tasks[item].link }>{ item }</a></td>{ data.mentors[mentor].students
+      .map(item => <tr key={ data.tasks[item].id }><td className='tasks-mame'><a target={ '_blank' } href={ data.tasks[item].link }>{ item }</a></td>{ data.mentors[mentor].students
         .map((stud) => <CellData key={ stud.tasks[item].id } nameClass={ stud.tasks[item].className } />
       )}</tr> 
     );
