@@ -9,9 +9,11 @@ html, body {
   width: 100%;
   position: fixed;
 }
+
 #cube-loader .caption {
   margin: 0 auto;
 }
+
 #cube-loader .cube-loader {
   width: 73px;
   height: 73px;
@@ -20,6 +22,7 @@ html, body {
   position: relative;
   transform: rotateZ(45deg);
 }
+
 #cube-loader .cube-loader .cube {
   position: relative;
   transform: rotateZ(45deg);
@@ -28,6 +31,7 @@ html, body {
   float: left;
   transform: scale(1.1);
 }
+
 #cube-loader .cube-loader .cube:before {
   content: "";
   position: absolute;
@@ -39,21 +43,27 @@ html, body {
   animation: cube-loader 2.76s infinite linear both;
   transform-origin: 100% 100%;
 }
+
 #cube-loader .cube-loader .loader-2 {
   transform: scale(1.1) rotateZ(90deg);
 }
+
 #cube-loader .cube-loader .loader-3 {
   transform: scale(1.1) rotateZ(180deg);
 }
+
 #cube-loader .cube-loader .loader-4 {
   transform: scale(1.1) rotateZ(270deg);
 }
+
 #cube-loader .cube-loader .loader-2:before {
   animation-delay: 0.35s;
 }
+
 #cube-loader .cube-loader .loader-3:before {
   animation-delay: 0.69s;
 }
+
 #cube-loader .cube-loader .loader-4:before {
   animation-delay: 1.04s;
 }

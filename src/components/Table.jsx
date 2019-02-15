@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CellData from './CellData';
 import HeadLineTable from './HeadLineTable';
+import PropTypes from 'prop-types';
 import '../style/Table.css';
 
 export class Table extends Component {
@@ -46,3 +47,7 @@ export class Table extends Component {
   }
 }
 
+Table.propTypes = {
+  data: PropTypes.object.isRequired,
+  mentor: PropTypes.string.isRequired
+};

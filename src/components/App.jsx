@@ -14,7 +14,7 @@ export class App extends Component {
     user: null,
     isLoading: true,
     data: null,
-    mentor: null,
+    mentor: '',
   };
 
   login = () => {
@@ -65,12 +65,12 @@ export class App extends Component {
             <div className='user'>
               <p className='user-name'>{user.displayName}</p>
               <img className="avatar" alt="avatar" title={user.displayName} src={user.photoURL}></img>
-              <button className="button-out" type="button" onClick={this.logout}>Logout</button>
+              <button className="button-out" type="button" onClick={this.logout}>LogOut</button>
             </div>
             <h1>Mentor dashboard</h1>
           </div>
           <div className='wrapper-search'>
-            <p>Select mentor: </p> 
+            <p>Select mentor: </p>
             <SelectValue 
               data={data}
               onMentorSelection = {this.onMentorSelection}

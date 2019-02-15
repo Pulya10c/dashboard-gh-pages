@@ -11,7 +11,6 @@ const config = {
 };
 const fire = firebase.initializeApp(config);
 const provider = new firebase.auth.GithubAuthProvider();
-
 provider.addScope('repo');
 
 const fb = {

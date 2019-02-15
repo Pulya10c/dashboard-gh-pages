@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
+import PropTypes from 'prop-types';
 import '../style/selectValue.css';
+
 
 export class SelectValue extends Component {
   constructor(props) {
@@ -39,4 +41,9 @@ export class SelectValue extends Component {
     );
   }
 }
+
+SelectValue.propTypes = {
+  data: PropTypes.object.isRequired,
+  onMentorSelection: PropTypes.func.isRequired
+};
 

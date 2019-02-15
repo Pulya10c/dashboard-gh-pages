@@ -1,6 +1,5 @@
 
 th {
-  /* width: 400px; */
   border-radius: 5px;
   padding: 8px 10px;
   border: 1px solid white;
@@ -30,7 +29,6 @@ table{
 a {
   text-decoration: none;
   display: inline-block;
-  /* padding: 5px 10px; */
   letter-spacing: 1px;
   font-size: 16px;
   font-weight: 600;
