@@ -31,7 +31,7 @@ export class SelectValue extends Component {
       return {value: data.mentors[item].mentorGithub, label: data.mentors[item].mentorGithub 
   }
   });
-  
+
     return (
         <Select
           value={selectedMentor}
